@@ -1,0 +1,44 @@
+$primary-color: #FAB91C;
+
+body {
+    background-color: #ffef85;
+
+}
+
+.Home {
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 650px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 100px 3px  rgba(158, 114, 19, 0.54);
+    margin: auto;
+    margin-top: 200px;
+    h1{
+        color: #fff7e4;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    div {
+       align-items: flex-start;
+       margin-right: 100px;
+
+    h3{
+        color: #ffef85;
+        font-weight: 400;
+    }
+    Button {
+        background-color: #ffef85;
+        color: #ce9416;
+
+
+    }
+    }
+}
+
+.hidden{
+    display: none;
+}

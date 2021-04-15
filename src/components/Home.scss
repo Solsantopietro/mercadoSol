@@ -1,7 +1,10 @@
 $primary-color: #FAB91C;
+$secondary-color: #f9a825;
+$background: #fff7e4;
+
 
 body {
-    background-color: #ffef85;
+    background-color:$background;
 
 }
 
@@ -18,7 +21,7 @@ body {
     margin: auto;
     margin-top: 200px;
     h1{
-        color: #fff7e4;
+        color: $background;
         font-size: 50px;
         margin-bottom: 40px;
     }
@@ -27,12 +30,12 @@ body {
        margin-right: 100px;
 
     h3{
-        color: #ffef85;
+        color: $secondary-color;
         font-weight: 400;
     }
     Button {
-        background-color: #ffef85;
-        color: #ce9416;
+        background-color: $secondary-color;
+        color: $background;
 
 
     }

@@ -1,7 +1,10 @@
 $primary-color: #FAB91C;
 
-.Header {
-    background-color: #FAB91C;
+header {
+
+    .MuiAppBar-colorPrimary {
+        background-color: #FAB91C;
+    }
 }
 
 .hidden {

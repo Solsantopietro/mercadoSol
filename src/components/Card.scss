@@ -1,0 +1,24 @@
+.Card {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin: 10px;
+    h1{
+        font-size: 15px;
+
+    }
+    img{
+        width: 90%;
+        height: auto;
+    }
+    
+}
+
+.hidden {
+    display: none;
+}

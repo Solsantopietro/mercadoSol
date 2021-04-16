@@ -11,7 +11,9 @@ const App = () => {
   const [click, setClick] = useState(0)
   const [busqueda, setBusqueda] = useState([])
   const [productosFiltrados, setProductosFiltrados] = useState(busqueda)
-  // const [submit, setSubmit] = useState(0)
+  const [valorDelInput, setValorDelInput] = useState('')
+
+  const [busquedaDeProducto, setBusquedaDeProducto] = useState([])
 
   const [valor, setValor] = useState("")
 
@@ -23,7 +25,7 @@ const App = () => {
         setBusqueda(data.results)
       })
 
-  }, [click, productosFiltrados]);
+  }, [click, busquedaDeProducto]);
     
   console.log(busqueda)
 
@@ -32,9 +34,9 @@ const App = () => {
     console.log("click")
   }
 
-  // const busquedaDeProducto = () => {
-  //   setSubmit(submit + 1)  
-  // }
+  const busquedaSubmit = () => {
+    setBusquedaDeProducto(valorDelInput)
+  }
  
 
 
@@ -52,15 +54,20 @@ console.log(valor)
     <div className="App">
       <Home click={click} handleChange={handleChange}/>
       
-      <Header click={click} handleSearchText={handleSearchText}/>
+      <Header click={click} handleSearchText={handleSearchText} busquedaSubmit={busquedaSubmit} valorDelInput={valorDelInput} setValorDelInput={setValorDelInput}/>
       <section>
         { productosFiltrados.map(producto =>
-        <Card 
+        <Card key={producto.id}
           click = {click}
           thumbnail={producto.thumbnail}
           title={producto.title}
           price={producto.price}
+          shipping={producto.shipping.free_shipping}
+
         />
+
+      
+          
       )}
       </section>
       

@@ -4,13 +4,15 @@ import { Button } from '@material-ui/core';
 
 
 
-const Card = ({ title, thumbnail, click, price }) => {
+const Card = ({ title, thumbnail, click, price, shipping }) => {
     return (
         <div className={ click === 0 ? "hidden" : "Card"}>
-            <h1>{title}</h1>
             <img src={thumbnail} />
+            <h1>{title}</h1>
+            {shipping && <h4>Tiene envio gratiuito</h4>}
             <p>$ {price}</p>
             <Button>Ver mas</Button>
+
         </div>
 
     )

@@ -81,18 +81,19 @@ const useStyles = makeStyles((themeCreate) => ({
   },
 }));
 
-const Header = ({click, handleSearchText }) => {
+const Header = ({click, handleSearchText, valorDelInput, setValorDelInput, busquedaSubmit }) => {
 
-  const [valorDelInput, setValorDelInput] = useState('')
 
   const handleChangeSearch = (e) =>{
     setValorDelInput(e.target.value)
     handleSearchText(e)
+   
   }
 
   const handleSubmit = (e) => {
-    handleChangeSearch(e)
     e.preventDefault(e)
+    console.log(valorDelInput)
+    busquedaSubmit()
     
   }
   
@@ -118,7 +119,7 @@ const Header = ({click, handleSearchText }) => {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <form>
+            <form onClick={handleSubmit}>
               <InputBase
               value={valorDelInput}
                 onChange={handleChangeSearch}
@@ -129,7 +130,7 @@ const Header = ({click, handleSearchText }) => {
                 }}
                 inputProps={{ 'aria-label': 'search' }}
               />
-              <input type="submit" onClick={handleSubmit} className="hidden"/>
+              <input type="submit"  className="hidden"/>
 
             </form>
           </div>
